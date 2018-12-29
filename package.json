@@ -1,0 +1,24 @@
+{
+  "name": "key.pics",
+  "version": "1.0.0",
+  "description": "Quick, Simple, Consistent, Scalable Key & Button Icons",
+  "scripts": {
+    "build": "webpack"
+  },
+  "files": [
+    "src/*",
+    "dist/*"
+  ],
+  "homepage": "https://key.pics",
+  "author": {
+    "name": "Haylee Schäfer",
+    "email": "mail@inventivetalent.org",
+    "url": "https://inventivetalent.org"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
