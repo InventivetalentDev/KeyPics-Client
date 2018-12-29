@@ -83,7 +83,6 @@ fabric.properties
 .idea/sonarlint
 
 ### Node ###
-package-lock.json
 # Logs
 logs
 *.log
