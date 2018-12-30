@@ -1,5 +1,3 @@
-const webpack = require("webpack");
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 module.exports = [
@@ -8,7 +6,7 @@ module.exports = [
         output: {
             filename: 'key.pics.js',
             path: path.resolve(__dirname, 'dist'),
-            libraryTarget: "var",
+            libraryTarget: "umd",
             library: "KeyPics"
         },
         optimization: {
@@ -21,7 +19,7 @@ module.exports = [
         output: {
             filename: 'key.pics.min.js',
             path: path.resolve(__dirname, 'dist'),
-            libraryTarget: "var",
+            libraryTarget: "umd",
             library: "KeyPics"
         },
         optimization: {

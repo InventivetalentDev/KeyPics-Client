@@ -5,6 +5,7 @@
   "scripts": {
     "build": "webpack"
   },
+  "main": "./dist/key.pics.js",
   "files": [
     "src/*",
     "dist/*"
