@@ -6,6 +6,8 @@ JavaScript-Client for [Key.Pics](https://key.pics/)
 
 ## Installation
 
+[![NPM](https://nodei.co/npm/key.pics.png)](https://nodei.co/npm/key.pics/)
+
 
 ``` 
 npm install --save key.pics
