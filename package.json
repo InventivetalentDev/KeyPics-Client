@@ -1,14 +1,40 @@
 {
   "name": "key.pics",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Quick, Simple, Consistent, Scalable Key & Button Icons",
-  "scripts": {
-    "build": "webpack"
+  "type": "module",
+  "main": "./dist/key.pics.cjs",
+  "module": "./dist/key.pics.esm.js",
+  "unpkg": "./dist/key.pics.min.js",
+  "jsdelivr": "./dist/key.pics.min.js",
+  "exports": {
+    ".": {
+      "import": "./dist/key.pics.esm.js",
+      "require": "./dist/key.pics.cjs",
+      "default": "./dist/key.pics.js"
+    },
+    "./dist/*": "./dist/*",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/key.pics.js",
+  "sideEffects": true,
   "files": [
-    "src/*",
-    "dist/*"
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test/*.test.js",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "keyboard",
+    "mouse",
+    "icons",
+    "svg",
+    "key.pics"
   ],
   "homepage": "https://key.pics",
   "author": {
@@ -23,8 +49,6 @@
   },
   "bugs": "https://github.com/InventivetalentDev/KeyPics-Client/issues",
   "devDependencies": {
-    "uglifyjs-webpack-plugin": "^2.1.1",
-    "webpack": "^4.28.2",
-    "webpack-cli": "^3.1.2"
+    "esbuild": "^0.28.2"
   }
 }

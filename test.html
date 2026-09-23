@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>key.pics client test page</title>
+    </head>
     <body>
-        <i class="keypics" data-mode="link" data-color="blue">K</i><!-- mode=link replaces the element with an <img> tag -->
-        <i class="keypics" data-mode="fetch" data-color="green">E</i><!-- mode=fetch downloads the SVG data and inserts it directly in the page -->
-        <i class="keypics" data-mode="link">Y</i>
-
-        <i class="keypics" data-type="mouse">right</i>
+        <p>
+            <i class="keypics" data-mode="link" data-color="blue">K</i><!-- mode=link replaces the element with an <img> tag -->
+            <i class="keypics" data-mode="fetch" data-color="green">E</i><!-- mode=fetch downloads the SVG data and inserts it directly in the page -->
+            <i class="keypics" data-mode="link">Y</i>
+            <i class="keypics" data-shape="wide" data-size="128">.pics</i>
+        </p>
+        <p>
+            <i class="keypics" data-type="mouse">right</i>
+            <i class="keypics" data-type="mouse" data-label="x2" data-color="light">left</i>
+            <i class="keypics" data-font="RobotoMono" data-font-style="Bold" data-label-color="#ffcc00">far:smile</i>
+            <i class="keypics" data-size="64">a b&amp;c</i>
+        </p>
 
         <script src="./dist/key.pics.js"></script>
+        <script>
+            // Elements inserted later can be converted on demand.
+            const late = document.createElement("i");
+            late.className = "keypics";
+            late.dataset.color = "purple";
+            late.textContent = "late";
+            document.body.appendChild(late);
+            KeyPics.applyIcon(late);
+        </script>
     </body>
 </html>
